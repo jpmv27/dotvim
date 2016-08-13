@@ -4,3 +4,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-bitbake"]
+	path = bundle/vim-bitbake
+	url = https://github.com/kergoth/vim-bitbake.git
