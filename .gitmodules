@@ -14,3 +14,6 @@
 	path = bundle/vim-project
 	url = https://github.com/jpmv27/vim-project.git
 	branch = jpmv27_master
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
