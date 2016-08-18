@@ -16,4 +16,4 @@
 	branch = jpmv27_master
 [submodule "bundle/vim-per-project-settings"]
 	path = bundle/vim-per-project-settings
-	url = git@github.com:jpmv27/vim-per-project-settings.git
+	url = https://github.com/jpmv27/vim-per-project-settings.git
