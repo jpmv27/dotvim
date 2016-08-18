@@ -54,6 +54,7 @@ execute pathogen#infect()
 
 " Configure Vim-project
 let g:project_enable_welcome=0
+let g:project_enable_win_title=0
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
