@@ -9,7 +9,6 @@ set colorcolumn=+1
 set showtabline=2
 set laststatus=2
 set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%v(%c),%l/%L\ %P
-set title
 
 " Search
 set ignorecase
@@ -36,6 +35,7 @@ highlight SpellBad ctermfg=0
 highlight SpellCap ctermfg=0
 highlight SpellRare ctermfg=0
 highlight SpellLocal ctermfg=0
+let g:load_doxygen_syntax=1
 syntax on
 
 " Miscellaneous
@@ -51,6 +51,9 @@ endif
 
 " Initialize Pathogen
 execute pathogen#infect()
+
+" Configure Vim-project
+let g:project_enable_welcome=0
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
