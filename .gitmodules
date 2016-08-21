@@ -17,3 +17,6 @@
 [submodule "bundle/vim-per-project-settings"]
 	path = bundle/vim-per-project-settings
 	url = https://github.com/jpmv27/vim-per-project-settings.git
+[submodule "bundle/vim-better-whitespace"]
+	path = bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
