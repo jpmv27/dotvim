@@ -26,6 +26,8 @@ filetype plugin indent on
 
 " Spelling
 set spell spelllang=en_ca
+set spellfile=~/.vim/spell/en.utf-8.add
+let g:pps_common_spellfile='~/.vim/spell/en.utf-8.add'
 
 " Colours and highlighting
 if !has('gui_running')
@@ -39,6 +41,7 @@ let g:load_doxygen_syntax=1
 syntax on
 
 " Miscellaneous
+set encoding=utf-8
 set showmatch
 set backspace=indent,eol,start
 set wildmode=longest,list:longest
@@ -48,6 +51,10 @@ if has('unnamedplus')
 elseif has('clipboard')
     set clipboard=unnamed,autoselect,exclude:cons\|linux
 endif
+
+" Configure Netrw
+let g:netrw_list_hide='\.swp$'
+let g:netrw_altfile=1
 
 " Initialize Pathogen
 execute pathogen#infect()
