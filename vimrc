@@ -30,9 +30,10 @@ set spellfile=~/.vim/spell/en.utf-8.add
 let g:pps_common_spellfile='~/.vim/spell/en.utf-8.add'
 
 " Colours and highlighting
-if !has('gui_running')
-    set background=dark
+if has('gui_running')
+    colorscheme elflord
 endif
+set background=dark
 highlight SpellBad ctermfg=0
 highlight SpellCap ctermfg=0
 highlight SpellRare ctermfg=0
