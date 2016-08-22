@@ -65,6 +65,9 @@ let g:project_enable_win_title=0
 let g:project_enable_tab_title_gui=1
 let g:project_enable_tab_title_term=1
 
+" Configure Vim-man
+map <leader>man <Plug>(Man)
+
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
 let s:vimrc_local = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/vimrc.local'
