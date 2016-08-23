@@ -53,6 +53,9 @@ elseif has('clipboard')
     set clipboard=unnamed,autoselect,exclude:cons\|linux
 endif
 
+" Custom commands
+command! -nargs=0 LcdHere lcd %:p:h
+
 " Configure Netrw
 let g:netrw_list_hide='\.swp$'
 let g:netrw_altfile=1
