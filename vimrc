@@ -76,6 +76,7 @@ nmap <leader>man <Plug>(Man)
 
 " Configure Tagbar
 nmap <leader>tb :TagbarToggle<CR>
+let g:tagbar_iconchars=['+','-']
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
