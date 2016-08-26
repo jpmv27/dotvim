@@ -72,7 +72,10 @@ let g:project_enable_tab_title_gui=1
 let g:project_enable_tab_title_term=1
 
 " Configure Vim-man
-map <leader>man <Plug>(Man)
+nmap <leader>man <Plug>(Man)
+
+" Configure Tagbar
+nmap <leader>tb :TagbarToggle<CR>
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
