@@ -77,6 +77,7 @@ nmap <leader>man <Plug>(Man)
 " Configure Tagbar
 nmap <leader>tb :TagbarToggle<CR>
 let g:tagbar_iconchars=['+','-']
+let g:tagbar_autofocus=1
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
