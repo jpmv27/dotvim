@@ -57,7 +57,9 @@ endif
 command! -nargs=0 LcdHere lcd %:p:h
 
 " Configure Netrw
-let g:netrw_list_hide='\.swp$'
+let g:netrw_sort_sequence='[\/]$,*,^[.]'
+let g:netrw_sort_options='i'
+let g:netrw_list_hide='\.swp$,\.o$,\.so$'
 let g:netrw_altfile=1
 
 " Initialize Pathogen
