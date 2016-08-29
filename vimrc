@@ -75,8 +75,9 @@ let g:project_enable_tab_title_term=1
 nmap <silent> <leader>man <Plug>(Man)
 
 " Configure Tagbar
-nmap <silent> <leader>tb :TagbarToggle<CR>
+let g:tagbar_case_insensitive=1
 let g:tagbar_autofocus=1
+nmap <silent> <leader>tb :TagbarToggle<CR>
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
