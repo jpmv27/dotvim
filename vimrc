@@ -9,6 +9,8 @@ set colorcolumn=+1
 set showtabline=2
 set laststatus=2
 set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%v(%c),%l/%L\ %P
+set encoding=utf-8
+set listchars=tab:▶▷,eol:⏎,trail:␠,nbsp:⎵,extends:⇨,precedes:⇨
 
 " Search
 set ignorecase
@@ -42,7 +44,6 @@ let g:load_doxygen_syntax=1
 syntax on
 
 " Miscellaneous
-set encoding=utf-8
 set showmatch
 set backspace=indent,eol,start
 set wildmode=longest,list:longest
