@@ -23,6 +23,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=-1
 set cindent
+set cinoptions=g0,(0,u0,U0
 set formatoptions=vtcrq
 filetype plugin indent on
 

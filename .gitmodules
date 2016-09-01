@@ -33,3 +33,6 @@
 	path = bundle/Smart-Tabs
 	url = https://github.com/jpmv27/Smart-Tabs.git
 	branch = jpmv27_master
+[submodule "bundle/vim-tag-manager"]
+	path = bundle/vim-tag-manager
+	url = https://github.com/jpmv27/vim-tag-manager.git
