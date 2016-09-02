@@ -30,7 +30,6 @@ filetype plugin indent on
 " Spelling
 set spell spelllang=en_ca
 set spellfile=~/.vim/spell/en.utf-8.add
-let g:pps_common_spellfile='~/.vim/spell/en.utf-8.add'
 
 " Colours and highlighting
 if has('gui_running')
@@ -80,6 +79,11 @@ nmap <silent> <leader>man <Plug>(Man)
 let g:tagbar_case_insensitive=1
 let g:tagbar_autofocus=1
 nmap <silent> <leader>tb :TagbarToggle<CR>
+
+" Configure vim-autoformat
+let g:formatters_c=['astyle_c']
+let g:formatters_cpp=['astyle_c']
+let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=' . $HOME . '/.astylerc"'
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
