@@ -36,3 +36,6 @@
 	path = bundle/vim-autoformat
 	url = https://github.com/jpmv27/vim-autoformat
 	branch = jpmv27_master
+[submodule "bundle/vim-less-smart-tabs"]
+	path = bundle/vim-less-smart-tabs
+	url = https://github.com/jpmv27/vim-less-smart-tabs.git
