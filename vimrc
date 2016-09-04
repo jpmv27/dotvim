@@ -1,7 +1,7 @@
 " Buffer management
 set autowriteall
 set hidden
-set switchbuf=useopen
+set switchbuf=usetab
 
 " Display
 set textwidth=100
@@ -65,6 +65,10 @@ let g:netrw_altfile=1
 
 " Initialize Pathogen
 execute pathogen#infect()
+
+" Configure BufExplorer
+let g:bufExplorerShowTabBuffer=1
+let g:bufExplorerOnlyOneTab=1
 
 " Configure Vim-project
 let g:project_enable_welcome=0

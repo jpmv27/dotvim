@@ -1,6 +1,3 @@
-[submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = https://github.com/jlanzarotta/bufexplorer.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -39,3 +36,7 @@
 [submodule "bundle/vim-less-smart-tabs"]
 	path = bundle/vim-less-smart-tabs
 	url = https://github.com/jpmv27/vim-less-smart-tabs.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/jpmv27/bufexplorer.git
+	branch = jpmv27_master
