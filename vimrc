@@ -26,6 +26,10 @@ set cindent
 set cinoptions=g0,(0,u0,U0
 set formatoptions=vtcrq
 filetype plugin indent on
+augroup martin
+    autocmd!
+    autocmd BufWinEnter * normal zR
+augroup END
 
 " Spelling
 set spell spelllang=en_ca
