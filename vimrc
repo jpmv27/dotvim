@@ -84,6 +84,7 @@ let g:project_enable_tab_title_term=1
 nmap <silent> <leader>man <Plug>(Man)
 
 " Configure Tagbar
+let g:tagbar_sort=0
 let g:tagbar_case_insensitive=1
 let g:tagbar_autofocus=1
 nmap <silent> <leader>tb :TagbarToggle<CR>
