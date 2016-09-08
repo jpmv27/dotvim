@@ -7,10 +7,6 @@
 [submodule "bundle/quilt"]
 	path = bundle/quilt
 	url = https://github.com/vim-scripts/quilt.git
-[submodule "bundle/vim-project"]
-	path = bundle/vim-project
-	url = https://github.com/jpmv27/vim-project.git
-	branch = jpmv27_master
 [submodule "bundle/vim-per-project-settings"]
 	path = bundle/vim-per-project-settings
 	url = https://github.com/jpmv27/vim-per-project-settings.git
