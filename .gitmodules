@@ -37,3 +37,7 @@
 	path = bundle/bufexplorer
 	url = https://github.com/jpmv27/bufexplorer.git
 	branch = jpmv27_master
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/jpmv27/tagbar.git
+	branch = jpmv27_master
