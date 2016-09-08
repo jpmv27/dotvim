@@ -94,6 +94,11 @@ let g:formatters_c=['astyle_c']
 let g:formatters_cpp=['astyle_c']
 let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=' . $HOME . '/.astylerc"'
 
+" Configure Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_vim_checkers=['vint']
+
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
 let s:vimrc_local = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/vimrc.local'
