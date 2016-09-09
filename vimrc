@@ -8,7 +8,7 @@ set textwidth=100
 set colorcolumn=+1
 set showtabline=2
 set laststatus=2
-set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%v(%c),%l/%L\ %P
+set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%*\ %=%v(%c),%l/%L\ %P
 set encoding=utf-8
 set listchars=tab:▶▷,eol:⏎,trail:␠,nbsp:⎵,extends:⇨,precedes:⇨
 
