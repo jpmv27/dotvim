@@ -97,6 +97,8 @@ let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=' . $HOME . '
 " Configure Syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
+let g:syntastic_c_compiler_options=''
+let g:syntastic_c_no_default_include_dirs=1
 let g:syntastic_vim_checkers=['vint']
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
