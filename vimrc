@@ -68,6 +68,7 @@ let g:netrw_sort_sequence='[\/]$,*,^[.]'
 let g:netrw_sort_options='i'
 let g:netrw_list_hide='\.swp$,\.o$,\.so$'
 let g:netrw_altfile=1
+let g:netrw_preview=1
 
 " Initialize Pathogen
 execute pathogen#infect()
@@ -102,6 +103,10 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_c_compiler_options=''
 let g:syntastic_c_no_default_include_dirs=1
 let g:syntastic_vim_checkers=['vint']
+
+" Configure Ctrlp
+let g:ctrlp_working_path_mode = ''
+let g:ctrlp_match_window = 'results:100'
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
