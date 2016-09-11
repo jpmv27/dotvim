@@ -62,6 +62,7 @@ endif
 
 " Custom commands
 command! -nargs=0 LcdHere lcd %:p:h
+command! -nargs=0 Terminal ConqueTermSplit bash
 
 " Configure Netrw
 let g:netrw_sort_sequence='[\/]$,*,^[.]'
@@ -107,6 +108,10 @@ let g:syntastic_vim_checkers=['vint']
 " Configure Ctrlp
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_match_window = 'results:100'
+
+" Configure Conque-Shell
+let g:ConqueTerm_StartMessages=0
+let g:ConqueTerm_CloseOnEnd=1
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
