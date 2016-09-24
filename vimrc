@@ -11,7 +11,7 @@ set textwidth=100
 set colorcolumn=+1
 set showtabline=2
 set laststatus=2
-set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%*\ %=%v(%c),%l/%L\ %P
+set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{CleanModeStatus()}%*\ %=%v(%c),%l/%L\ %P
 set listchars=tab:▶▷,eol:⏎,trail:␠,nbsp:⎵,extends:⇨,precedes:⇨
 
 " Search
@@ -62,6 +62,9 @@ endif
 " Custom commands
 command! -nargs=0 LcdHere lcd %:p:h
 command! -nargs=0 Terminal ConqueTermSplit bash
+
+" Configure "clean" mode
+nmap <silent> <leader>cm :ToggleCleanMode<cr>
 
 " Configure Netrw
 let g:netrw_sort_sequence='[\/]$,*,^[.]'
