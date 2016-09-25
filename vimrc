@@ -16,6 +16,7 @@ set listchars=tab:▶▷,eol:⏎,trail:␠,nbsp:⎵,extends:⇨,precedes:⇨
 
 " Search
 set ignorecase
+set smartcase
 set incsearch
 set nohlsearch
 
@@ -114,6 +115,12 @@ let g:ctrlp_match_window = 'results:100'
 " Configure Conque-Shell
 let g:ConqueTerm_StartMessages=0
 let g:ConqueTerm_CloseOnEnd=1
+
+" Configure vim-easygrep
+let g:EasyGrepMode=2
+let g:EasyGrepRecursive=1
+let g:EasyGrepWindow=1
+let g:EasyGrepSearchCurrentBufferDir=0
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)

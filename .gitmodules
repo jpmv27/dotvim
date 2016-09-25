@@ -51,3 +51,7 @@
 [submodule "bundle/vim-less-smart-tabs"]
 	path = bundle/vim-less-smart-tabs
 	url = https://github.com/jpmv27/vim-less-smart-tabs.git
+[submodule "bundle/vim-easygrep"]
+	path = bundle/vim-easygrep
+	url = https://github.com/jpmv27/vim-easygrep.git
+	branch = jpmv27_master
