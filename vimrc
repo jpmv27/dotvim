@@ -121,7 +121,6 @@ let g:ConqueTerm_CloseOnEnd=1
 " Configure vim-easygrep
 let g:EasyGrepCommand=1
 let g:EasyGrepMode=2
-let g:EasyGrepRecursive=1
 let g:EasyGrepWindow=1
 let g:EasyGrepSearchCurrentBufferDir=0
 
