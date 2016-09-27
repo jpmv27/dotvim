@@ -50,6 +50,7 @@ let g:load_doxygen_syntax=1
 syntax on
 
 " Miscellaneous
+set grepprg=grep\ -nsI\ $*\ /dev/null
 set showmatch
 set backspace=indent,eol,start
 set wildmode=longest,list:longest
@@ -117,6 +118,7 @@ let g:ConqueTerm_StartMessages=0
 let g:ConqueTerm_CloseOnEnd=1
 
 " Configure vim-easygrep
+let g:EasyGrepCommand=1
 let g:EasyGrepMode=2
 let g:EasyGrepRecursive=1
 let g:EasyGrepWindow=1
