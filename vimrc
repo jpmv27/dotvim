@@ -94,7 +94,8 @@ nmap <silent> <leader>man <Plug>(Man)
 " Configure Tagbar
 let g:tagbar_sort=0
 let g:tagbar_case_insensitive=1
-let g:tagbar_autofocus=1
+" See tagbar issues #344 and #345
+"let g:tagbar_autofocus=1
 nmap <silent> <leader>tb :TagbarToggle<CR>
 
 " Configure vim-autoformat
