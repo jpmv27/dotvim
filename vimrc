@@ -50,7 +50,6 @@ let g:load_doxygen_syntax=1
 syntax on
 
 " Miscellaneous
-set grepprg=grep\ -nsI\ $*\ /dev/null
 set showmatch
 set backspace=indent,eol,start
 set wildmode=longest,list:longest
@@ -122,6 +121,7 @@ let g:EasyGrepCommand=1
 let g:EasyGrepMode=2
 let g:EasyGrepWindow=1
 let g:EasyGrepSearchCurrentBufferDir=0
+let g:EasyGrepRecursive=1
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
