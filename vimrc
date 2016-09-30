@@ -121,6 +121,8 @@ let g:EasyGrepMode=2
 let g:EasyGrepWindow=1
 let g:EasyGrepSearchCurrentBufferDir=0
 let g:EasyGrepRecursive=1
+let g:EasyGrepFilesToExclude='*.swp,*~,*.map,*.d'
+let g:EasyGrepDirsToExclude='.svn,.git'
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
