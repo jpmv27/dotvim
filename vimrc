@@ -120,6 +120,7 @@ let g:EasyGrepCommand=1
 let g:EasyGrepMode=2
 let g:EasyGrepWindow=1
 let g:EasyGrepSearchCurrentBufferDir=0
+let g:EasyGrepAllOptionsInExplorer=1
 let g:EasyGrepRecursive=1
 let g:EasyGrepFilesToExclude='*.swp,*~,*.map,*.d'
 let g:EasyGrepDirsToExclude='.svn,.git'
