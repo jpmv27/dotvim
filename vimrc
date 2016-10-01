@@ -86,6 +86,10 @@ let g:project_enable_win_title=0
 let g:project_enable_tab_title_gui=1
 let g:project_enable_tab_title_term=1
 
+" Configure vim-per-project-settings
+nmap <silent> <leader>vpa :PpsEgApply<CR>
+nmap <silent> <leader>vpr :PpsEgReset<CR>
+
 " Configure Vim-man
 nmap <silent> <leader>man <Plug>(Man)
 
