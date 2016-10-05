@@ -87,6 +87,7 @@ let g:project_enable_tab_title_gui=1
 let g:project_enable_tab_title_term=1
 
 " Configure vim-per-project-settings
+call pps#utils#init()
 nmap <silent> <leader>vpa :PpsEgApply<CR>
 nmap <silent> <leader>vpr :PpsEgReset<CR>
 
