@@ -110,6 +110,8 @@ let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_c_compiler_options=''
 let g:syntastic_c_no_default_include_dirs=1
+let g:syntastic_cpp_compiler_options=''
+let g:syntastic_cpp_no_default_include_dirs=1
 let g:syntastic_vim_checkers=['vint']
 
 " Configure Ctrlp
