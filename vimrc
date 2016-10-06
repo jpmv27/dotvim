@@ -72,6 +72,7 @@ let g:netrw_sort_options='i'
 let g:netrw_list_hide='\.swp$,\.o$,\.so$'
 let g:netrw_altfile=1
 let g:netrw_preview=1
+nmap <silent> <leader>ex :Explore<CR>
 
 " Initialize Pathogen
 execute pathogen#infect()
@@ -85,6 +86,8 @@ let g:project_enable_welcome=0
 let g:project_enable_win_title=0
 let g:project_enable_tab_title_gui=1
 let g:project_enable_tab_title_term=1
+nmap <silent> <leader>we :Welcome<CR>
+nmap <silent> <leader>wt :TabWelcome<CR>
 
 " Configure vim-per-project-settings
 call pps#utils#init()
