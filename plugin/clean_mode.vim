@@ -21,7 +21,8 @@ function! s:EnableCleanSettings() abort
     endif
 
     if !exists('b:clean_saved_syntastic')
-        let b:clean_saved_syntastic = get(g:, 'syntastic_check_on_open', 0) && !get(b:, 'syntastic_skip_checks', 0)
+        let b:clean_saved_syntastic = [ get(g:, 'syntastic_check_on_open', 0), exists('b:syntastic_skip_checks'), get(b:, 'syntastic_skip_checks', 0) ]
+        let b:syntastic_skip_checks = 1
         silent execute "normal! :SyntasticReset\<cr>"
     endif
 endfunction
@@ -31,6 +32,7 @@ function! s:RestorePreviousSettings() abort
         if b:clean_saved_spell
             setlocal spell
         endif
+
         unlet b:clean_saved_spell
     endif
 
@@ -43,13 +45,21 @@ function! s:RestorePreviousSettings() abort
         if b:clean_saved_bws
             silent execute "normal! :EnableWhitespace\<cr>"
         endif
+
         unlet b:clean_saved_bws
     endif
 
     if exists('b:clean_saved_syntastic')
-        if b:clean_saved_syntastic
+        if b:clean_saved_syntastic[1]
+            let b:syntastic_skip_checks = b:clean_saved_syntastic[2]
+        else
+            unlet! b:syntastic_skip_checks
+        endif
+
+        if b:clean_saved_syntastic[0]
             silent execute "normal! :SyntasticCheck\<cr>"
         endif
+
         unlet b:clean_saved_syntastic
     endif
 endfunction
