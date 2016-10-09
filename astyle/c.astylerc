@@ -1,0 +1,5 @@
+indent=spaces
+pad-oper
+pad-header
+unpad-paren
+indent-switches

@@ -90,9 +90,7 @@ nmap <silent> <leader>we :Welcome<CR>
 nmap <silent> <leader>wt :TabWelcome<CR>
 
 " Configure vim-per-project-settings
-call pps#utils#init()
-nmap <silent> <leader>vpa :PpsEgApply<CR>
-nmap <silent> <leader>vpr :PpsEgReset<CR>
+call pps#init('~/.per_project_settings')
 
 " Configure Vim-man
 nmap <silent> <leader>man <Plug>(Man)
@@ -105,8 +103,9 @@ nmap <silent> <leader>to :TagbarOpen fj<CR>
 
 " Configure vim-autoformat
 let g:formatters_c=['astyle_c']
-let g:formatters_cpp=['astyle_c']
-let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=' . $HOME . '/.astylerc"'
+let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=~/.vim/astyle/c.astylerc"'
+let g:formatters_cpp=['astyle_cpp']
+let g:formatdef_astyle_cpp='"astyle --mode=c --suffix=none --options=~/.vim/astyle/cpp.astylerc"'
 
 " Configure Syntastic
 let g:syntastic_check_on_open=1
