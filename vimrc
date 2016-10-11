@@ -102,6 +102,9 @@ nmap <silent> <leader>tb :TagbarToggle<CR>
 nmap <silent> <leader>to :TagbarOpen fj<CR>
 
 " Configure vim-autoformat
+let g:autoformat_remove_trailing_spaces=0
+let g:autoformat_retab=0
+let g:autoformat_autoindent=0
 let g:formatters_c=['astyle_c']
 let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=~/.vim/astyle/c.astylerc"'
 let g:formatters_cpp=['astyle_cpp']
