@@ -102,13 +102,16 @@ nmap <silent> <leader>tb :TagbarToggle<CR>
 nmap <silent> <leader>to :TagbarOpen fj<CR>
 
 " Configure vim-autoformat
+let g:autoformat_verbosemode=1
 let g:autoformat_remove_trailing_spaces=0
 let g:autoformat_retab=0
 let g:autoformat_autoindent=0
 let g:formatters_c=['astyle_c']
-let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=~/.vim/astyle/c.astylerc"'
+let g:formatdef_astyle_c='"astyle --mode=c --suffix=none --options=$HOME/.vim/astyle/c.astylerc"'
 let g:formatters_cpp=['astyle_cpp']
-let g:formatdef_astyle_cpp='"astyle --mode=c --suffix=none --options=~/.vim/astyle/cpp.astylerc"'
+let g:formatdef_astyle_cpp='"astyle --mode=c --suffix=none --options=$HOME/.vim/astyle/cpp.astylerc"'
+let g:formatters_java=['astyle_java']
+let g:formatdef_astyle_java='"astyle --mode=java --suffix=none --options=$HOME/.vim/astyle/java.astylerc"'
 
 " Configure Syntastic
 let g:syntastic_check_on_open=1

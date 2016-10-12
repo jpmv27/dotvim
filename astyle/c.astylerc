@@ -1,3 +1,5 @@
+style=allman
+add-brackets
 indent=spaces
 pad-oper
 pad-header

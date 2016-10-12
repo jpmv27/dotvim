@@ -1,9 +1,7 @@
-style=allman
+style=java
 add-brackets
-attach-extern-c
 indent=spaces
 pad-oper
 pad-header
 unpad-paren
 indent-switches
-indent-namespaces
