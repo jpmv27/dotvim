@@ -141,7 +141,8 @@ let g:EasyGrepFilesToExclude='*.swp,*~,*.map,*.d'
 let g:EasyGrepDirsToExclude='.svn,.git'
 
 " Configure vim-bookmarks
-let g:bookmark_location_list=1
+" Causes E924, see issue #98
+"let g:bookmark_location_list=1
 let g:bookmark_auto_close=1
 let g:bookmark_no_default_key_mappings=1
 nmap <silent> <Leader>mm :BookmarkToggle<CR>
