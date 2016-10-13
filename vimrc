@@ -93,7 +93,7 @@ nmap <silent> <leader>wt :TabWelcome<CR>
 call pps#init('~/.per_project_settings')
 
 " Configure Vim-man
-nmap <silent> <leader>man <Plug>(Man)
+nmap <silent> <leader>lu <Plug>(Man)
 
 " Configure Tagbar
 let g:tagbar_sort=0
@@ -139,6 +139,17 @@ let g:EasyGrepAllOptionsInExplorer=1
 let g:EasyGrepRecursive=1
 let g:EasyGrepFilesToExclude='*.swp,*~,*.map,*.d'
 let g:EasyGrepDirsToExclude='.svn,.git'
+
+" Configure vim-bookmarks
+let g:bookmark_location_list=1
+let g:bookmark_auto_close=1
+let g:bookmark_no_default_key_mappings=1
+nmap <silent> <Leader>mm :BookmarkToggle<CR>
+nmap <silent> <Leader>mi :BookmarkAnnotate<CR>
+nmap <silent> <Leader>ma :BookmarkShowAll<CR>
+nmap <silent> <Leader>mn :BookmarkNext<CR>
+nmap <silent> <Leader>mp :BookmarkPrev<CR>
+nmap <silent> <Leader>mc :BookmarkClear<CR>
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
