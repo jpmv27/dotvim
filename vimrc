@@ -1,6 +1,9 @@
 set encoding=utf-8
 scriptencoding utf-8
 
+" When jumping from location bar across tabs, spurious E924 generated
+let s:use_loclist = has('E924fix')
+
 " Buffer management
 set autowriteall
 set hidden
@@ -136,8 +139,9 @@ if match(system('grep --version'), 'GNU.*2\.10') >= 0
 endif
 let g:EasyGrepCommand=1
 let g:EasyGrepMode=2
-" Use quickfix due to E924 errors
-"let g:EasyGrepWindow=1
+if s:use_loclist
+    let g:EasyGrepWindow=1
+endif
 let g:EasyGrepSearchCurrentBufferDir=0
 let g:EasyGrepAllOptionsInExplorer=1
 let g:EasyGrepRecursive=1
@@ -145,9 +149,9 @@ let g:EasyGrepFilesToExclude='*.swp,*~,*.map,*.d'
 let g:EasyGrepDirsToExclude='.svn,.git'
 
 " Configure vim-bookmarks
-" Use quickfix due to E924 errors
-"let g:bookmark_location_list=1
-let g:bookmark_auto_close=1
+if s:use_loclist
+    let g:bookmark_location_list=1
+endif
 let g:bookmark_no_default_key_mappings=1
 nmap <silent> <Leader>mm :BookmarkToggle<CR>
 nmap <silent> <Leader>mi :BookmarkAnnotate<CR>
