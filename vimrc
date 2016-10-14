@@ -131,6 +131,9 @@ let g:ConqueTerm_StartMessages=0
 let g:ConqueTerm_CloseOnEnd=1
 
 " Configure vim-easygrep
+if match(system('grep --version'), 'GNU.*2\.10') >= 0
+    echo 'GNU grep 2.10 is buggy, vim-easygrep will not work properly'
+endif
 let g:EasyGrepCommand=1
 let g:EasyGrepMode=2
 " Use quickfix due to E924 errors
