@@ -133,7 +133,8 @@ let g:ConqueTerm_CloseOnEnd=1
 " Configure vim-easygrep
 let g:EasyGrepCommand=1
 let g:EasyGrepMode=2
-let g:EasyGrepWindow=1
+" Use quickfix due to E924 errors
+"let g:EasyGrepWindow=1
 let g:EasyGrepSearchCurrentBufferDir=0
 let g:EasyGrepAllOptionsInExplorer=1
 let g:EasyGrepRecursive=1
@@ -141,7 +142,7 @@ let g:EasyGrepFilesToExclude='*.swp,*~,*.map,*.d'
 let g:EasyGrepDirsToExclude='.svn,.git'
 
 " Configure vim-bookmarks
-" Causes E924, see issue #98
+" Use quickfix due to E924 errors
 "let g:bookmark_location_list=1
 let g:bookmark_auto_close=1
 let g:bookmark_no_default_key_mappings=1
