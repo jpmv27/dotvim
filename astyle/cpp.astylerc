@@ -1,6 +1,5 @@
 style=allman
 add-brackets
-attach-extern-c
 indent=spaces
 pad-oper
 pad-header
