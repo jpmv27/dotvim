@@ -4,15 +4,6 @@ scriptencoding utf-8
 " When jumping from location bar across tabs, spurious E924 generated
 let s:use_loclist = has('E924fix') || has('patch-8.0.37')
 
-" 7.4.2299 adds new autocmd events that causes E926 errors when using location bar
-if s:use_loclist && has('patch-7.4.2299')
-    if exists('+newqfacmd')
-        set nonewqfacmd
-    else
-        let s:use_loclist = 0
-    endif
-endif
-
 " Buffer management
 set autowriteall
 set hidden
@@ -39,7 +30,7 @@ set shiftwidth=4
 set softtabstop=-1
 set formatoptions=vtcrq
 filetype plugin indent on
-augroup martin
+augroup vimrc_unfold
     autocmd!
     autocmd BufWinEnter * normal zR
 augroup END
@@ -126,13 +117,13 @@ let g:formatters_java = ['astyle_java']
 let g:formatdef_astyle_java='"astyle --mode=java --suffix=none --options = $HOME/.vim/astyle/java.astylerc"'
 
 " Configure Syntastic
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_c_compiler_options = ''
 let g:syntastic_c_no_default_include_dirs = 1
 let g:syntastic_cpp_compiler_options = ''
 let g:syntastic_cpp_no_default_include_dirs = 1
 let g:syntastic_vim_checkers = ['vint']
+call syntastic_helper#init()
 
 " Configure Ctrlp
 let g:ctrlp_working_path_mode = ''
