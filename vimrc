@@ -169,6 +169,12 @@ nmap <silent> <Leader>mn :BookmarkNext<CR>
 nmap <silent> <Leader>mp :BookmarkPrev<CR>
 nmap <silent> <Leader>mc :BookmarkClear<CR>
 
+" Configure vim-template
+let g:templates_no_autocmd = 1
+let g:templates_search_height = 0
+let g:templates_directory = ['$HOME/.vim-templates', '$HOME/.vim/templates']
+let g:templates_user_variables = []
+
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
 let s:vimrc_local = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/vimrc.local'

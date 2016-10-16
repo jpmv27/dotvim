@@ -59,3 +59,6 @@
 	path = bundle/vim-bookmarks
 	url = https://github.com/jpmv27/vim-bookmarks.git
 	branch = jpmv27_master
+[submodule "bundle/vim-template"]
+	path = bundle/vim-template
+	url = https://github.com/aperezdc/vim-template.git
