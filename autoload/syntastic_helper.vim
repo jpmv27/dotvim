@@ -3,7 +3,11 @@ function! s:RunSyntastic() abort
 
     SyntasticCheck
 
-    lolder
+    try
+        silent lolder
+    catch /E380.*/
+        "ignore
+    endtry
 
     augroup syntastic_helper_run
         autocmd!
