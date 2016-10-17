@@ -1,11 +1,9 @@
 function! s:RunSyntastic() abort
-    let saved_list = getloclist(0)
-    let saved_title = getloclist(0, {'title': ''})
+    call setloclist(0, [])
 
     SyntasticCheck
 
-    call setloclist(0, saved_list, 'r')
-    call setloclist(0, [], 'r', saved_title)
+    lolder
 
     augroup syntastic_helper_run
         autocmd!
