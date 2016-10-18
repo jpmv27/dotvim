@@ -68,6 +68,7 @@ command! -nargs=0 Terminal ConqueTermSplit bash
 
 " Configure "clean" mode
 nmap <silent> <leader>cm :ToggleCleanMode<cr>
+nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
 
 " Configure Netrw
 let g:netrw_sort_sequence = '[\/]$,*,^[.]'

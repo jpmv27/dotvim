@@ -76,10 +76,8 @@ function! s:ApplyCleanMode() abort
     endif
 endfunction
 
-function! s:ToggleCleanMode() abort
+function! s:UpdateAllWindows() abort
     let sw = winnr()
-
-    let t:clean_mode = !get(t:, 'clean_mode', s:clean_mode_default)
 
     for wn in range(1, winnr('$'))
         call s:GoToWindow(wn)
@@ -89,14 +87,35 @@ function! s:ToggleCleanMode() abort
     call s:GoToWindow(sw)
 endfunction
 
+function! s:ToggleCleanMode() abort
+    let t:clean_mode = !get(t:, 'clean_mode', s:clean_mode_default)
+    call s:UpdateAllWindows()
+endfunction
+
+function! s:ToggleDefaultCleanMode() abort
+    let s:clean_mode_default = !s:clean_mode_default
+
+    if !exists('t:clean_mode')
+        call s:UpdateAllWindows()
+    endif
+endfunction
+
 function! CleanModeStatus() abort
     return (get(t:, 'clean_mode', s:clean_mode_default) && &modifiable && !&diff) ? '[CLEAN]' : ''
 endfunction
 
 command! -nargs=0 ToggleCleanMode call s:ToggleCleanMode()
+command! -nargs=0 ToggleDefaultCleanMode call s:ToggleDefaultCleanMode()
 
 augroup clean_mode
     autocmd!
     autocmd BufEnter * call s:ApplyCleanMode()
 augroup END
 
+if v:vim_did_enter
+    call s:UpdateAllWindows()
+else
+    augroup clean_mode
+        autocmd VimEnter * call s:UpdateAllWindows()
+    augroup END
+endif
