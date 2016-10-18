@@ -117,13 +117,16 @@ let g:formatters_java = ['astyle_java']
 let g:formatdef_astyle_java='"astyle --mode=java --suffix=none --options = $HOME/.vim/astyle/java.astylerc"'
 
 " Configure Syntastic
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_reuse_loc_lists = 0
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_c_compiler_options = ''
 let g:syntastic_c_no_default_include_dirs = 1
 let g:syntastic_cpp_compiler_options = ''
 let g:syntastic_cpp_no_default_include_dirs = 1
 let g:syntastic_vim_checkers = ['vint']
-call syntastic_helper#init()
+"call syntastic_helper#init()
 
 " Configure Ctrlp
 let g:ctrlp_working_path_mode = ''
