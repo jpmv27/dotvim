@@ -1,6 +1,8 @@
 " Clean-up distractions
 
-function! s:GoToWindow(nr)
+let s:clean_mode_default = exists('$VIM_FORCE_CLEAN')
+
+function! s:GoToWindow(nr) abort
     execute a:nr . 'wincmd w'
 endfunction
 
@@ -67,21 +69,17 @@ function! s:ApplyCleanMode() abort
         return
     endif
 
-    if !exists('t:clean_mode')
-        call s:RestorePreviousSettings()
-    else
+    if get(t:, 'clean_mode', s:clean_mode_default) || &diff
         call s:EnableCleanSettings()
+    else
+        call s:RestorePreviousSettings()
     endif
 endfunction
 
 function! s:ToggleCleanMode() abort
     let sw = winnr()
 
-    if !exists('t:clean_mode')
-        let t:clean_mode = ''
-    else
-        unlet t:clean_mode
-    endif
+    let t:clean_mode = !get(t:, 'clean_mode', s:clean_mode_default)
 
     for wn in range(1, winnr('$'))
         call s:GoToWindow(wn)
@@ -92,7 +90,7 @@ function! s:ToggleCleanMode() abort
 endfunction
 
 function! CleanModeStatus() abort
-    return (exists('t:clean_mode') && &modifiable) ? '[CLEAN]' : ''
+    return (get(t:, 'clean_mode', s:clean_mode_default) && &modifiable && !&diff) ? '[CLEAN]' : ''
 endfunction
 
 command! -nargs=0 ToggleCleanMode call s:ToggleCleanMode()
