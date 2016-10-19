@@ -105,7 +105,13 @@ function! s:ToggleDefaultCleanMode() abort
 endfunction
 
 function! CleanModeStatus() abort
-    return (get(t:, 'clean_mode', s:clean_mode_default) && &modifiable && !s:IsException()) ? '[C]' : ''
+    if get(t:, 'clean_mode', s:clean_mode_default) && &modifiable && !s:IsException()
+        return '[C]'
+    elseif s:IsException()
+        return '[X]'
+    else
+        return ''
+    endif
 endfunction
 
 command! -nargs=0 ToggleCleanMode call s:ToggleCleanMode()
