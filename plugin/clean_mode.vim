@@ -30,7 +30,7 @@ function! s:EnableCleanSettings() abort
 endfunction
 
 function! s:IsException() abort
-    return &diff || (&filetype ==# '')
+    return &diff || (&filetype ==# '') || (&filetype ==# 'git') || (&filetype ==# 'messages')
 endfunction
 
 function! s:RestorePreviousSettings() abort
