@@ -29,6 +29,10 @@ function! s:EnableCleanSettings() abort
     endif
 endfunction
 
+function! s:IsException() abort
+    return &diff || (&filetype ==# '')
+endfunction
+
 function! s:RestorePreviousSettings() abort
     if exists('b:clean_saved_spell')
         if b:clean_saved_spell
@@ -69,7 +73,7 @@ function! s:ApplyCleanMode() abort
         return
     endif
 
-    if get(t:, 'clean_mode', s:clean_mode_default) || &diff
+    if get(t:, 'clean_mode', s:clean_mode_default) || s:IsException()
         call s:EnableCleanSettings()
     else
         call s:RestorePreviousSettings()
@@ -101,7 +105,7 @@ function! s:ToggleDefaultCleanMode() abort
 endfunction
 
 function! CleanModeStatus() abort
-    return (get(t:, 'clean_mode', s:clean_mode_default) && &modifiable && !&diff) ? '[CLEAN]' : ''
+    return (get(t:, 'clean_mode', s:clean_mode_default) && &modifiable && !s:IsException()) ? '[C]' : ''
 endfunction
 
 command! -nargs=0 ToggleCleanMode call s:ToggleCleanMode()
