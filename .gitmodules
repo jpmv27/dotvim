@@ -62,3 +62,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-clean-mode"]
+	path = bundle/vim-clean-mode
+	url = https://github.com/jpmv27/vim-clean-mode.git

@@ -14,7 +14,7 @@ set textwidth=100
 set colorcolumn=+1
 set showtabline=2
 set laststatus=2
-set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{CleanModeStatus()}%*\ %=%v(%c),%l/%L\ %P
+set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{clean_mode#status()}%*\ %=%v(%c),%l/%L\ %P
 set listchars=tab:▶▷,eol:⏎,trail:␠,nbsp:⎵,extends:⇨,precedes:⇨
 
 " Search
@@ -65,10 +65,6 @@ endif
 " Custom commands
 command! -nargs=0 LcdHere lcd %:p:h
 command! -nargs=0 Terminal ConqueTermSplit bash
-
-" Configure "clean" mode
-nmap <silent> <leader>cm :ToggleCleanMode<cr>
-nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
 
 " Configure Netrw
 let g:netrw_sort_sequence = '[\/]$,*,^[.]'
@@ -170,6 +166,11 @@ let g:templates_no_autocmd = 1
 let g:templates_search_height = 0
 let g:templates_directory = ['$HOME/.vim-templates', '$HOME/.vim/templates']
 let g:templates_user_variables = []
+
+" Configure vim-clean-mode
+call clean_mode#init()
+nmap <silent> <leader>cm :ToggleCleanMode<cr>
+nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
