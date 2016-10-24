@@ -170,17 +170,17 @@ let g:templates_search_height = 0
 let g:templates_directory = ['$HOME/.vim-templates', '$HOME/.vim/templates']
 let g:templates_user_variables = []
 
-" Configure vim-clean-mode
-call clean_mode#init()
-let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'messages', 'netrw', 'project', 'qf']
-nmap <silent> <leader>cm :ToggleCleanMode<cr>
-nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
-
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
 let s:vimrc_local = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/vimrc.local'
 if filereadable(s:vimrc_local)
     exec 'source' s:vimrc_local
 endif
+
+" Configure vim-clean-mode (must be the very last thing)
+call clean_mode#init()
+let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'messages', 'netrw', 'project', 'qf']
+nmap <silent> <leader>cm :ToggleCleanMode<cr>
+nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
 
 unlet! s:use_loclist
