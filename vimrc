@@ -174,7 +174,7 @@ let g:templates_user_variables = []
 
 " Configure vim-clean-mode
 call clean_mode#init()
-let g:clean_mode_force += ['git', 'messages']
+let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'messages', 'netrw', 'project', 'qf']
 nmap <silent> <leader>cm :ToggleCleanMode<cr>
 nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
 
