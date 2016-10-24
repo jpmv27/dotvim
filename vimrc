@@ -10,8 +10,7 @@ set hidden
 set switchbuf=usetab
 
 " Display
-set textwidth=100
-set colorcolumn=+1
+set colorcolumn=101
 set showtabline=2
 set laststatus=2
 set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{clean_mode#status()}%*\ %=%v(%c),%l/%L\ %P
