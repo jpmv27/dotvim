@@ -50,7 +50,6 @@ highlight SpellCap ctermfg=0
 highlight SpellRare ctermfg=0
 highlight SpellLocal ctermfg=0
 syntax on
-let g:load_doxygen_syntax = 1
 
 " Miscellaneous
 set showmatch
