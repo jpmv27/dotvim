@@ -179,7 +179,7 @@ endif
 
 " Configure vim-clean-mode (must be the very last thing)
 call clean_mode#init()
-let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'messages', 'netrw', 'project', 'qf']
+let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'messages', 'project', 'qf']
 nmap <silent> <leader>cm :ToggleCleanMode<cr>
 nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
 
