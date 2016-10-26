@@ -48,6 +48,9 @@ highlight SpellBad ctermfg=0
 highlight SpellCap ctermfg=0
 highlight SpellRare ctermfg=0
 highlight SpellLocal ctermfg=0
+" vim-cpp-enhanced-highlight
+highlight link cAnsiFunction Keyword
+highlight link cAnsiName Keyword
 syntax on
 
 " Miscellaneous
