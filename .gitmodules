@@ -19,9 +19,6 @@
 [submodule "bundle/vim-man"]
 	path = bundle/vim-man
 	url = https://github.com/vim-utils/vim-man.git
-[submodule "bundle/vim-tag-manager"]
-	path = bundle/vim-tag-manager
-	url = https://github.com/jpmv27/vim-tag-manager.git
 [submodule "bundle/vim-autoformat"]
 	path = bundle/vim-autoformat
 	url = https://github.com/jpmv27/vim-autoformat
@@ -72,3 +69,6 @@
 	path = bundle/OmniCppComplete
 	url = https://github.com/jpmv27/OmniCppComplete.git
 	branch = jpmv27_master
+[submodule "bundle/vim-tag-manager"]
+	path = bundle/vim-tag-manager
+	url = https://github.com/jpmv27/vim-tag-manager.git
