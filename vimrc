@@ -39,6 +39,9 @@ set spell
 set spelllang=en_ca
 set spellfile=~/.vim/spell/en.utf-8.add
 
+" Autocomplete
+set completeopt-=preview
+
 " Colours and highlighting
 if has('gui_running')
     colorscheme elflord

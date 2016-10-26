@@ -68,3 +68,7 @@
 [submodule "bundle/vim-cpp-enhanced-highlight"]
 	path = bundle/vim-cpp-enhanced-highlight
 	url = https://github.com/jpmv27/vim-cpp-enhanced-highlight.git
+[submodule "bundle/OmniCppComplete"]
+	path = bundle/OmniCppComplete
+	url = https://github.com/jpmv27/OmniCppComplete.git
+	branch = jpmv27_master
