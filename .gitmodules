@@ -62,11 +62,11 @@
 [submodule "bundle/vim-tag-manager"]
 	path = bundle/vim-tag-manager
 	url = https://github.com/jpmv27/vim-tag-manager.git
-[submodule "bundle/quilt"]
-	path = bundle/quilt
-	url = https://github.com/jpmv27/quilt.git
-	branch = jpmv27_master
 [submodule "bundle/vim-template"]
 	path = bundle/vim-template
 	url = https://github.com/jpmv27/vim-template.git
+	branch = jpmv27_master
+[submodule "bundle/quilt"]
+	path = bundle/quilt
+	url = https://github.com/jpmv27/quilt.git
 	branch = jpmv27_master
