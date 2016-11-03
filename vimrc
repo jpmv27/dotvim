@@ -79,7 +79,17 @@ let g:netrw_altfile = 1
 let g:netrw_preview = 1
 let g:Netrw_UserMaps = [['Q', 'VimrcNetrwQuit']]
 function! VimrcNetrwQuit(isLocal) abort
+    if has('clipboard')
+        let savedstar = @*
+        let savedplus = @+
+    endif
+
     Rexplore
+
+    if has('clipboard')
+        let @* = savedstar
+        let @+ = savedplus
+    endif
 
     try
         let @# = w:vimrc_alt
@@ -94,10 +104,20 @@ function! VimrcNetrwExplore() abort
     catch
     endtry
 
+    if has('clipboard')
+        let savedstar = @*
+        let savedplus = @+
+    endif
+
     if exists(':Rexplore')
         Rexplore
     else
         Explore
+    endif
+
+    if has('clipboard')
+        let @* = savedstar
+        let @+ = savedplus
     endif
 endfunction
 nmap <silent> <leader>ex :call VimrcNetrwExplore()<CR>
