@@ -77,11 +77,30 @@ let g:netrw_sort_options = 'i'
 let g:netrw_list_hide = '\.swp$,\.o$,\.so$'
 let g:netrw_altfile = 1
 let g:netrw_preview = 1
+let g:Netrw_UserMaps = [['Q', 'VimrcNetrwQuit']]
 function! VimrcNetrwQuit(isLocal) abort
     Rexplore
+
+    try
+        let @# = w:vimrc_alt
+        unlet! w:vimrc_alt
+    catch
+    endtry
 endfunction
-let g:Netrw_UserMaps = [['Q', 'VimrcNetrwQuit']]
-nmap <silent> <leader>ex :execute (exists(':Rexplore') ? 'Rexplore' : 'Explore')<CR>
+function! VimrcNetrwExplore() abort
+    try
+        let w:vimrc_alt = bufnr('#')
+        let @# = bufnr('%')
+    catch
+    endtry
+
+    if exists(':Rexplore')
+        Rexplore
+    else
+        Explore
+    endif
+endfunction
+nmap <silent> <leader>ex :call VimrcNetrwExplore()<CR>
 
 " Initialize Pathogen
 execute pathogen#infect()
