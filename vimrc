@@ -93,8 +93,9 @@ function! VimrcNetrwQuit(isLocal) abort
 
     try
         let @# = w:vimrc_alt
-        unlet! w:vimrc_alt
     catch
+    finally
+        unlet! w:vimrc_alt
     endtry
 endfunction
 function! VimrcNetrwExplore() abort
