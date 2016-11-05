@@ -78,37 +78,33 @@ let g:netrw_list_hide = '\.swp$,\.o$,\.so$'
 let g:netrw_altfile = 1
 let g:netrw_preview = 1
 let g:Netrw_UserMaps = [['Q', 'VimrcNetrwQuit']]
-function! VimrcNetrwQuit(isLocal) abort
+function! s:save_reg() abort
     if has('clipboard')
-        let savedstar = @*
-        let savedplus = @+
+        let s:saved_star = [getreg('*', 1, 1), getregtype('*')]
+        let s:saved_plus = [getreg('+', 1, 1), getregtype('+')]
     endif
+endfunction
+function! s:restore_reg() abort
+    if has('clipboard')
+        call setreg('*', s:saved_star[0], s:saved_star[1])
+        call setreg('+', s:saved_plus[0], s:saved_plus[1])
+    endif
+endfunction
+function! VimrcNetrwQuit(isLocal) abort
+    call s:save_reg()
 
     Rexplore
 
-    if has('clipboard')
-        let @* = savedstar
-        let @+ = savedplus
-    endif
+    call s:restore_reg()
 
-    try
-        let @# = w:vimrc_alt
-    catch
-    finally
-        unlet! w:vimrc_alt
-    endtry
+    let @# = w:vimrc_alt
+    unlet! w:vimrc_alt
 endfunction
 function! VimrcNetrwExplore() abort
-    try
-        let w:vimrc_alt = bufnr('#')
-        let @# = bufnr('%')
-    catch
-    endtry
+    let w:vimrc_alt = bufnr('#')
+    let @# = bufnr('%')
 
-    if has('clipboard')
-        let savedstar = @*
-        let savedplus = @+
-    endif
+    call s:save_reg()
 
     if exists(':Rexplore')
         Rexplore
@@ -116,10 +112,7 @@ function! VimrcNetrwExplore() abort
         Explore
     endif
 
-    if has('clipboard')
-        let @* = savedstar
-        let @+ = savedplus
-    endif
+    call s:restore_reg()
 endfunction
 nmap <silent> <leader>ex :call VimrcNetrwExplore()<CR>
 
