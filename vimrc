@@ -57,6 +57,7 @@ highlight link cAnsiName Keyword
 syntax on
 
 " Miscellaneous
+set tags=
 set showmatch
 set backspace=indent,eol,start
 set wildmode=longest,list:longest
