@@ -187,6 +187,7 @@ if s:use_loclist
     let g:EasyGrepWindow = 1
 endif
 let g:EasyGrepSearchCurrentBufferDir = 0
+let g:EasyGrepJumpToMatch = 0
 let g:EasyGrepAllOptionsInExplorer = 1
 let g:EasyGrepRecursive = 1
 let g:EasyGrepFilesToExclude = '*.swp,*~,*.map,*.d'
