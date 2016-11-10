@@ -69,6 +69,7 @@ elseif has('clipboard')
 endif
 
 " Custom commands
+command! -nargs=0 ForceDos edit ++fileformat=dos | setlocal buftype=nowrite
 command! -nargs=0 LcdHere lcd %:p:h
 command! -nargs=0 Terminal ConqueTermSplit bash
 
