@@ -131,7 +131,6 @@ let g:syntastic_c_no_default_include_dirs = 1
 let g:syntastic_cpp_compiler_options = ''
 let g:syntastic_cpp_no_default_include_dirs = 1
 let g:syntastic_vim_checkers = ['vint']
-"call syntastic_helper#init()
 command -nargs=0 ErrorsReplace let g:syntastic_reuse_loc_lists = 1 | call SyntasticErrors() | let g:syntastic_reuse_loc_lists = 0
 
 " Configure Ctrlp
