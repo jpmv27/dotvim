@@ -79,44 +79,8 @@ let g:netrw_sort_options = 'i'
 let g:netrw_list_hide = '\.swp$,\.o$,\.so$'
 let g:netrw_altfile = 1
 let g:netrw_preview = 1
-let g:Netrw_UserMaps = [['Q', 'VimrcNetrwQuit']]
-function! s:save_reg() abort
-    if has('clipboard')
-        let s:saved_star = [getreg('*', 1, 1), getregtype('*')]
-        let s:saved_plus = [getreg('+', 1, 1), getregtype('+')]
-    endif
-endfunction
-function! s:restore_reg() abort
-    if has('clipboard')
-        call setreg('*', s:saved_star[0], s:saved_star[1])
-        call setreg('+', s:saved_plus[0], s:saved_plus[1])
-    endif
-endfunction
-function! VimrcNetrwQuit(isLocal) abort
-    call s:save_reg()
-
-    Rexplore
-
-    call s:restore_reg()
-
-    let @# = w:vimrc_alt
-    unlet! w:vimrc_alt
-endfunction
-function! VimrcNetrwExplore() abort
-    let w:vimrc_alt = bufnr('#')
-    let @# = bufnr('%')
-
-    call s:save_reg()
-
-    if exists(':Rexplore')
-        Rexplore
-    else
-        Explore
-    endif
-
-    call s:restore_reg()
-endfunction
-nmap <silent> <leader>ex :call VimrcNetrwExplore()<CR>
+let g:Netrw_UserMaps = [['Q', 'netrw_helper#quit']]
+nmap <silent> <leader>ex :call netrw_helper#explore()<CR>
 
 " Initialize Pathogen
 execute pathogen#infect()
