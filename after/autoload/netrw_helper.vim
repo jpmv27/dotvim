@@ -57,7 +57,7 @@ else
 
         call s:save_reg()
 
-        if exists(':Rexplore')
+        if exists(':Rexplore') == 2 && exists('w:netrw_rexlocal')
             Rexplore
         else
             Explore
