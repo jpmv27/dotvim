@@ -15,7 +15,7 @@ if g:loaded_netrwPlugin >=# 'v162d'
             let @# = bufnr('%')
         endif
 
-        if exists(':Rexplore')
+        if exists(':Rexplore') == 2 && exists('w:netrw_rexlocal')
             Rexplore
         else
             Explore
