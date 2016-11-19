@@ -67,3 +67,7 @@
 	path = bundle/quilt
 	url = https://github.com/jpmv27/quilt.git
 	branch = jpmv27_master
+[submodule "bundle/a.vim"]
+	path = bundle/a.vim
+	url = https://github.com/jpmv27/a.vim.git
+	branch = jpmv27_master
