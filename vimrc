@@ -101,7 +101,7 @@ nmap <silent> <leader>wt :TabWelcome<CR>
 call pps#init('~/.per_project_settings')
 
 " Configure Vim-man
-nmap <silent> <leader>lu <Plug>(Man)
+nmap <silent> <leader>kk <Plug>(Man)
 
 " Configure Tagbar
 let g:tagbar_sort = 0
@@ -141,6 +141,8 @@ let g:ctrlp_map = '<leader>ep'
 " Configure Conque-Shell
 let g:ConqueTerm_StartMessages = 0
 let g:ConqueTerm_CloseOnEnd = 1
+" Disable mapping by specifying a combination already in use
+let g:ConqueTerm_ExecFileKey = '<leader>ex'
 
 " Configure vim-easygrep
 if match(system('grep --version'), 'GNU.*2\.10') >= 0
@@ -163,12 +165,12 @@ if s:use_loclist
     let g:bookmark_location_list = 1
 endif
 let g:bookmark_no_default_key_mappings = 1
-nmap <silent> <Leader>mm :BookmarkToggle<CR>
-nmap <silent> <Leader>mi :BookmarkAnnotate<CR>
-nmap <silent> <Leader>ma :BookmarkShowAll<CR>
-nmap <silent> <Leader>mn :BookmarkNext<CR>
-nmap <silent> <Leader>mp :BookmarkPrev<CR>
-nmap <silent> <Leader>mc :BookmarkClear<CR>
+nmap <silent> <leader>mm :BookmarkToggle<CR>
+nmap <silent> <leader>mi :BookmarkAnnotate<CR>
+nmap <silent> <leader>ma :BookmarkShowAll<CR>
+nmap <silent> <leader>mn :BookmarkNext<CR>
+nmap <silent> <leader>mp :BookmarkPrev<CR>
+nmap <silent> <leader>mc :BookmarkClear<CR>
 
 " Configure vim-template
 let g:templates_no_autocmd = 1
@@ -179,6 +181,13 @@ let g:templates_user_variables = []
 " Configure vim-fugitive
 let g:fugitive_no_maps = 1
 
+" Configure a.vim
+nmap <silent> <leader>aa :A<CR>
+nmap <silent> <leader>an :AN<CR>
+nmap <silent> <leader>as :AS<CR>
+nmap <silent> <leader>at :AT<CR>
+nmap <silent> <leader>av :AV<CR>
+
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
 let s:vimrc_local = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/vimrc.local'
@@ -188,7 +197,7 @@ endif
 
 " Configure vim-clean-mode (must be the very last thing)
 call clean_mode#init()
-let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'messages', 'project', 'qf', 'tagbar', 'tags']
+let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'man', 'messages', 'project', 'qf', 'tagbar', 'tags']
 nmap <silent> <leader>cm :ToggleCleanMode<cr>
 nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
 
