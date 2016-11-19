@@ -136,6 +136,7 @@ command -nargs=0 ErrorsReplace let g:syntastic_reuse_loc_lists = 1 | call Syntas
 " Configure Ctrlp
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_match_window = 'results:100'
+let g:ctrlp_map = '<leader>ep'
 
 " Configure Conque-Shell
 let g:ConqueTerm_StartMessages = 0
@@ -174,6 +175,9 @@ let g:templates_no_autocmd = 1
 let g:templates_search_height = 0
 let g:templates_directory = ['$HOME/.vim-templates', '$HOME/.vim/templates']
 let g:templates_user_variables = []
+
+" Configure vim-fugitive
+let g:fugitive_no_maps = 1
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
