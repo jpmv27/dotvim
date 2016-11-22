@@ -182,6 +182,7 @@ let g:templates_user_variables = []
 let g:fugitive_no_maps = 1
 
 " Configure a.vim
+let g:alternateNoDefaultAlternate = 1
 nmap <silent> <leader>aa :A<CR>
 nmap <silent> <leader>an :AN<CR>
 nmap <silent> <leader>as :AS<CR>
