@@ -71,3 +71,6 @@
 	path = bundle/a.vim
 	url = https://github.com/jpmv27/a.vim.git
 	branch = jpmv27_master
+[submodule "bundle/ReplaceWithRegister"]
+	path = bundle/ReplaceWithRegister
+	url = https://github.com/vim-scripts/ReplaceWithRegister.git
