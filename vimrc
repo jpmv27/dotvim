@@ -132,6 +132,11 @@ let g:syntastic_cpp_compiler_options = ''
 let g:syntastic_cpp_no_default_include_dirs = 1
 let g:syntastic_vim_checkers = ['vint']
 command -nargs=0 ErrorsReplace let g:syntastic_reuse_loc_lists = 1 | call SyntasticErrors() | let g:syntastic_reuse_loc_lists = 0
+nmap <silent> <leader>st :SyntasticToggleMode<CR>
+nmap <silent> <leader>si :SyntasticInfo<CR>
+nmap <silent> <leader>sc :SyntasticCheck<CR>
+nmap <silent> <leader>se :Errors<CR>
+nmap <silent> <leader>sr :ErrorsReplace<CR>
 
 " Configure Ctrlp
 let g:ctrlp_working_path_mode = ''
@@ -199,7 +204,7 @@ endif
 " Configure vim-clean-mode (must be the very last thing)
 call clean_mode#init()
 let g:clean_mode_force += ['conque_term', 'easygrep', 'git', 'help', 'man', 'messages', 'project', 'qf', 'tagbar', 'tags']
-nmap <silent> <leader>cm :ToggleCleanMode<cr>
-nmap <silent> <leader>cd :ToggleDefaultCleanMode<cr>
+nmap <silent> <leader>cm :ToggleCleanMode<CR>
+nmap <silent> <leader>cd :ToggleDefaultCleanMode<CR>
 
 unlet! s:use_loclist
