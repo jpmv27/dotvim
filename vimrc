@@ -121,7 +121,6 @@ let g:formatters_java = ['astyle_java']
 let g:formatdef_astyle_java='"astyle --mode=java --suffix=none --options = $HOME/.vim/astyle/java.astylerc"'
 
 " Configure Syntastic
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_reuse_loc_lists = 0
 let g:syntastic_auto_loc_list = 0
@@ -130,6 +129,7 @@ let g:syntastic_c_no_default_include_dirs = 1
 let g:syntastic_cpp_compiler_options = ''
 let g:syntastic_cpp_no_default_include_dirs = 1
 let g:syntastic_vim_checkers = ['vint']
+call syntastic_helper#enable()
 command -nargs=0 ErrorsReplace let g:syntastic_reuse_loc_lists = 1 | call SyntasticErrors() | let g:syntastic_reuse_loc_lists = 0
 nmap <silent> <leader>st :SyntasticToggleMode<CR>
 nmap <silent> <leader>si :SyntasticInfo<CR>
