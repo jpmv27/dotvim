@@ -14,7 +14,7 @@ function! s:set_altfile() abort
 endfunction
 
 function! s:restore_altfile() abort
-    if g:netrw_altfile
+    if g:netrw_altfile && exists('w:vimrc_alt')
         let @# = w:vimrc_alt
         unlet! w:vimrc_alt
     endif
