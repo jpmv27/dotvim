@@ -40,7 +40,7 @@ set spelllang=en_ca
 set spellfile=~/.vim/spell/en.utf-8.add
 
 " Completion
-set completeopt=menu,menuone,noinsert
+set completeopt=menuone,noinsert
 
 " Colours and highlighting
 if has('gui_running')
