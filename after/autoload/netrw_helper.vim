@@ -15,7 +15,9 @@ endfunction
 
 function! s:restore_altfile() abort
     if g:netrw_altfile && exists('w:vimrc_alt')
-        let @# = w:vimrc_alt
+        if w:vimrc_alt != -1
+            let @# = w:vimrc_alt
+        endif
         unlet! w:vimrc_alt
     endif
 endfunction
@@ -23,9 +25,13 @@ endfunction
 " v162b and v162d fix issues with overwriting plus register
 if g:loaded_netrwPlugin >=# 'v162d'
     function! netrw_helper#quit(isLocal) abort
-        Rexplore
+        if exists('w:netrw_rexlocal')
+            Rexplore
 
-        call s:restore_altfile()
+            call s:restore_altfile()
+        else
+            bdelete
+        endif
     endfunction
 
     function! netrw_helper#explore() abort
@@ -49,13 +55,17 @@ else
     endfunction
 
     function! netrw_helper#quit(isLocal) abort
-        call s:save_reg()
+        if exists('w:netrw_rexlocal')
+            call s:save_reg()
 
-        Rexplore
+            Rexplore
 
-        call s:restore_reg()
+            call s:restore_reg()
 
-        call s:restore_altfile()
+            call s:restore_altfile()
+        else
+            bdelete
+        endif
     endfunction
 
     function! netrw_helper#explore() abort
