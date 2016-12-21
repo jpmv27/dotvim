@@ -76,3 +76,7 @@
 	path = bundle/ReplaceWithSameIndentRegister
 	url = https://github.com/jpmv27/ReplaceWithSameIndentRegister.git
 	branch = jpmv27_master
+[submodule "bundle/vim-lawrencium"]
+	path = bundle/vim-lawrencium
+	url = https://github.com/jpmv27/vim-lawrencium.git
+	branch = jpmv27_master
