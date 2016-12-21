@@ -13,7 +13,7 @@ set switchbuf=usetab
 set colorcolumn=101
 set showtabline=2
 set laststatus=2
-set statusline=%{fugitive#statusline()}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{clean_mode#status()}%*\ %=%v(%c),%l/%L\ %P
+set statusline=%{fugitive#statusline()}%{lawrencium#statusline('[Hg(',')]')}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{clean_mode#status()}%*\ %=%v(%c),%l/%L\ %P
 set listchars=tab:▶▷,eol:⏎,trail:␠,nbsp:⎵,extends:⇨,precedes:⇨
 
 " Search
@@ -192,6 +192,9 @@ nmap <silent> <leader>an :AN<CR>
 nmap <silent> <leader>as :AS<CR>
 nmap <silent> <leader>at :AT<CR>
 nmap <silent> <leader>av :AV<CR>
+
+" Configure vim-lawrencium
+let g:lawrencium_define_mappings = 0
 
 " Local customizations go into vimrc.local in same directory as vimrc (this script)
 " (from https://stackoverflow.com/a/18734557)
