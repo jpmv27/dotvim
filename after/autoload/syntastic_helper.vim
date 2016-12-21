@@ -26,9 +26,9 @@ function! syntastic_helper#run(timer) abort
 
     let after = s:LoclistNumber()
     if after < before
-        lnewer
+        execute 'lnewer ' . (before - after)
     elseif after > before && before != 0
-        lolder
+        execute 'lolder ' . (after - before)
     endif
 endfunction
 
