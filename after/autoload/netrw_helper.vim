@@ -6,21 +6,31 @@ function! s:explore() abort
     endif
 endfunction
 
-function! s:set_altfile() abort
-    if g:netrw_altfile
-        let w:vimrc_alt = bufnr('#')
-        let @# = bufnr('%')
-    endif
-endfunction
-
-function! s:restore_altfile() abort
-    if g:netrw_altfile && exists('w:vimrc_alt')
-        if w:vimrc_alt != -1
-            let @# = w:vimrc_alt
+if v:version > 704 || (v:version == 704 && has('patch605'))
+    function! s:set_altfile() abort
+        if g:netrw_altfile
+            let w:vimrc_alt = bufnr('#')
+            let @# = bufnr('%')
         endif
-        unlet! w:vimrc_alt
-    endif
-endfunction
+    endfunction
+
+    function! s:restore_altfile() abort
+        if g:netrw_altfile && exists('w:vimrc_alt')
+            if w:vimrc_alt != -1
+                let @# = w:vimrc_alt
+            endif
+            unlet! w:vimrc_alt
+        endif
+    endfunction
+else
+    function! s:set_altfile() abort
+        " No-op since # register is read-only
+    endfunction
+
+    function! s:restore_altfile() abort
+        " No-op since # register is read-only
+    endfunction
+endif
 
 " v162b and v162d fix issues with overwriting plus register
 if g:loaded_netrwPlugin >=# 'v162d'
@@ -40,12 +50,21 @@ if g:loaded_netrwPlugin >=# 'v162d'
         call s:explore()
     endfunction
 else
-    function! s:save_reg() abort
-        if has('clipboard')
-            let s:saved_star = [getreg('*', 1, 1), getregtype('*')]
-            let s:saved_plus = [getreg('+', 1, 1), getregtype('+')]
-        endif
-    endfunction
+    if v:version > 704 || (v:version == 704 && has('patch242'))
+        function! s:save_reg() abort
+            if has('clipboard')
+                let s:saved_star = [getreg('*', 1, 1), getregtype('*')]
+                let s:saved_plus = [getreg('+', 1, 1), getregtype('+')]
+            endif
+        endfunction
+    else
+        function! s:save_reg() abort
+            if has('clipboard')
+                let s:saved_star = [getreg('*', 1), getregtype('*')]
+                let s:saved_plus = [getreg('+', 1), getregtype('+')]
+            endif
+        endfunction
+    endif
 
     function! s:restore_reg() abort
         if has('clipboard')

@@ -40,7 +40,10 @@ set spelllang=en_ca
 set spellfile=~/.vim/spell/en.utf-8.add
 
 " Completion
-set completeopt=menuone,noinsert
+set completeopt=menuone
+if v:version > 704 || (v:version == 704 && has('patch775'))
+    set completeopt+=noinsert
+endif
 
 " Colours and highlighting
 if has('gui_running')

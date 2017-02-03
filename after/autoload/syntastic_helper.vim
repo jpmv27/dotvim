@@ -33,8 +33,12 @@ function! syntastic_helper#run(timer) abort
 endfunction
 
 function! syntastic_helper#enable() abort
-    augroup syntastic_helper_sched
-        autocmd!
-        autocmd BufReadPost * call s:ScheduleSyntasticHelper()
-    augroup END
+    if exists('*timer_start')
+        augroup syntastic_helper_sched
+            autocmd!
+            autocmd BufReadPost * call s:ScheduleSyntasticHelper()
+        augroup END
+    else
+        let g:syntastic_check_on_open = 1
+    endif
 endfunction
