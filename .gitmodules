@@ -81,3 +81,7 @@
 	path = bundle/syntastic
 	url = https://github.com/jpmv27/syntastic
 	branch = jpmv27_master
+[submodule "bundle/DirDiff.vim"]
+	path = bundle/DirDiff.vim
+	url = https://github.com/jpmv27/DirDiff.vim.git
+	branch = jpmv27_master
