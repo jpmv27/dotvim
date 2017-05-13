@@ -85,3 +85,6 @@
 	path = bundle/DirDiff.vim
 	url = https://github.com/jpmv27/DirDiff.vim.git
 	branch = jpmv27_master
+[submodule "bundle/vim-tags2spell"]
+	path = bundle/vim-tags2spell
+	url = https://github.com/jpmv27/vim-tags2spell.git
