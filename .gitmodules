@@ -88,3 +88,6 @@
 [submodule "bundle/vim-tags2spell"]
 	path = bundle/vim-tags2spell
 	url = https://github.com/jpmv27/vim-tags2spell.git
+[submodule "bundle/vim-side-by-side-diff"]
+	path = bundle/vim-side-by-side-diff
+	url = https://github.com/jpmv27/vim-side-by-side-diff.git
