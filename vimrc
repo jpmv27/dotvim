@@ -49,7 +49,7 @@ endif
 
 " Colours and highlighting
 if has('gui_running')
-    colorscheme elflord
+    colorscheme koehler
 endif
 set background=dark
 highlight SpellBad ctermfg=0
