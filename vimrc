@@ -168,6 +168,7 @@ let g:EasyGrepAllOptionsInExplorer = 1
 let g:EasyGrepRecursive = 1
 let g:EasyGrepFilesToExclude = '*.swp,*~,*.map,*.d'
 let g:EasyGrepDirsToExclude = '.svn,.git'
+let g:EasyGrepEchoCommands = 1
 
 " Configure vim-bookmarks
 if s:use_loclist
