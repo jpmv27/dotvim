@@ -1,4 +1,8 @@
 function! s:LoclistNumber() abort
+    if exists(':lhistory') != 2
+        return 0
+    endif
+
     redir => list
     silent execute 'lhistory'
     redir END
