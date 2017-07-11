@@ -13,7 +13,7 @@ set switchbuf=usetab
 set colorcolumn=101
 set showtabline=2
 set laststatus=2
-set statusline=%{fugitive#statusline()}%{lawrencium#statusline('[Hg(',')]')}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{clean_mode#status()}%*\ %=%v(%c),%l/%L\ %P
+set statusline=%{fugitive#statusline()}%{lawrencium#statusline('[Hg(',')]')}\ %f\ [%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%{tagbar#currenttag('\ [%s]','')}\ %#ErrorMsg#%{SyntasticStatuslineFlag()}%{clean_mode#status()}%*\ %=%v(%c),%l/%L\ %P
 set listchars=tab:▶▷,eol:⏎,trail:␠,nbsp:⎵,extends:⇨,precedes:⇨
 set splitright
 set cursorline
