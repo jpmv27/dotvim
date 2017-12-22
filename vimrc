@@ -67,6 +67,7 @@ set showmatch
 set backspace=indent,eol,start
 set wildmode=longest,list:longest
 set mouse=a
+set diffopt+=vertical
 if has('unnamedplus')
     set clipboard=unnamedplus,autoselect,exclude:cons\|linux
 elseif has('clipboard')
