@@ -97,3 +97,15 @@ else
         call s:restore_reg()
     endfunction
 endif
+
+function! s:cleanup_history() abort
+    if &filetype ==# 'netrw'
+        call histdel('/', '@\$')
+        call histdel('/', '\\a')
+    endif
+endfunction
+
+augroup netrw_helper_cleanup
+    autocmd!
+    autocmd BufLeave * call s:cleanup_history()
+augroup END
