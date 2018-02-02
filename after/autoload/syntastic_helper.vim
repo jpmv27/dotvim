@@ -4,11 +4,7 @@ function! s:LoclistNumber() abort
     endif
 
     redir => list
-    try
-        silent execute 'lhistory'
-    catch /.*E523.*/
-        let list = 'No entries'
-    endtry
+    silent execute 'lhistory'
     redir END
 
     if list ==? 'No entries'
