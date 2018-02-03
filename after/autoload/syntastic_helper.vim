@@ -24,16 +24,23 @@ function! s:ScheduleSyntasticHelper() abort
 endfunction
 
 function! syntastic_helper#run(timer) abort
-    let before = s:LoclistNumber()
+    " The callback can be called when an autocmd calls system()
+    " but we're not in a suitable state to execute this. Until
+    " a better work-around is found, just catch the error and
+    " give up.
+    try
+        let before = s:LoclistNumber()
 
-    SyntasticCheck
+        SyntasticCheck
 
-    let after = s:LoclistNumber()
-    if after < before
-        execute 'lnewer ' . (before - after)
-    elseif after > before && before != 0
-        execute 'lolder ' . (after - before)
-    endif
+        let after = s:LoclistNumber()
+        if after < before
+            execute 'lnewer ' . (before - after)
+        elseif after > before && before != 0
+            execute 'lolder ' . (after - before)
+        endif
+    catch /.*/
+    endtry
 endfunction
 
 function! syntastic_helper#enable() abort
