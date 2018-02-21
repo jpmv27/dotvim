@@ -1,17 +1,19 @@
 function! s:LoclistNumber() abort
+    let l:list = ''
+
     if exists(':lhistory') != 2
         return 0
     endif
 
-    redir => list
+    redir => l:list
     silent execute 'lhistory'
     redir END
 
-    if list ==? 'No entries'
+    if l:list ==? 'No entries'
         return 0
     endif
 
-    return (index(map(split(list, '\n'), 'v:val[0] ==# ">"'), 1) + 1)
+    return (index(map(split(l:list, '\n'), 'v:val[0] ==# ">"'), 1) + 1)
 endfunction
 
 function! s:ScheduleSyntasticHelper() abort
@@ -27,7 +29,7 @@ function! syntastic_helper#run(timer) abort
     " The callback can be called when an autocmd calls system()
     " but we're not in a suitable state to execute this. Until
     " a better work-around is found, just catch the error and
-    " give up.
+    " try again a little later.
     try
         let before = s:LoclistNumber()
 
@@ -40,6 +42,7 @@ function! syntastic_helper#run(timer) abort
             execute 'lolder ' . (after - before)
         endif
     catch /.*/
+        call timer_start(500, 'syntastic_helper#run')
     endtry
 endfunction
 
