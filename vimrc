@@ -214,7 +214,7 @@ endif
 
 " Configure vim-clean-mode (must be the very last thing)
 call clean_mode#init()
-let g:clean_mode_force += ['conque_term', 'diff', 'easygrep', 'git', 'help', 'man', 'messages', 'project', 'qf', 'strace', 'tagbar', 'tags']
+let g:clean_mode_force += ['conque_term', 'diff', 'easygrep', 'git', 'help', 'logfile', 'man', 'messages', 'project', 'qf', 'strace', 'tagbar', 'tags']
 nmap <silent> <leader>cm :ToggleCleanMode<CR>
 nmap <silent> <leader>cd :ToggleDefaultCleanMode<CR>
 
