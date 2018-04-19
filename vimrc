@@ -68,6 +68,7 @@ set backspace=indent,eol,start
 set wildmode=longest,list:longest
 set mouse=a
 set diffopt+=vertical
+set makeprg=build_me
 if has('unnamedplus')
     set clipboard=unnamedplus,autoselect,exclude:cons\|linux
 elseif has('clipboard')
