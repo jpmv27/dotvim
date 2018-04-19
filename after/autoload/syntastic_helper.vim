@@ -26,6 +26,10 @@ function! s:ScheduleSyntasticHelper() abort
 endfunction
 
 function! syntastic_helper#run(timer) abort
+    if get(b:, 'syntastic_skip_checks', 0)
+        return
+    endif
+
     " The callback can be called when an autocmd calls system()
     " but we're not in a suitable state to execute this. Until
     " a better work-around is found, just catch the error and
