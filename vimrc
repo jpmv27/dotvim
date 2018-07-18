@@ -183,6 +183,7 @@ nmap <silent> <leader>ma :BookmarkShowAll<CR>
 nmap <silent> <leader>mn :BookmarkNext<CR>
 nmap <silent> <leader>mp :BookmarkPrev<CR>
 nmap <silent> <leader>mc :BookmarkClear<CR>
+nmap <silent> <leader>mx :BookmarkClearAll<CR>
 
 " Configure vim-template
 let g:templates_no_autocmd = 1
