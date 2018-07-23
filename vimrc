@@ -62,6 +62,8 @@ highlight link cAnsiName Keyword
 syntax on
 
 " Miscellaneous
+nmap <c-k> <c-e>
+nmap <c-j> <c-y>
 set tags=
 set showmatch
 set backspace=indent,eol,start
@@ -78,6 +80,8 @@ endif
 " Custom commands
 command! -nargs=0 ForceDos edit ++fileformat=dos | setlocal buftype=nowrite
 command! -nargs=0 LcdHere lcd %:p:h
+command! -nargs=0 ScrollBind setlocal scrollbind
+command! -nargs=0 ScrollUnbind setlocal noscrollbind
 command! -nargs=0 Terminal ConqueTermSplit bash
 
 " Configure Netrw
