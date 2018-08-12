@@ -80,6 +80,7 @@ endif
 " Custom commands
 command! -nargs=0 ForceDos edit ++fileformat=dos | setlocal buftype=nowrite
 command! -nargs=0 LcdHere lcd %:p:h
+command! -nargs=0 LcdHereLock lcd %:p:h | call project#config#set_directory_lock(1)
 command! -nargs=0 ScrollBind setlocal scrollbind
 command! -nargs=0 ScrollUnbind setlocal noscrollbind
 command! -nargs=0 Terminal ConqueTermSplit bash
@@ -164,7 +165,7 @@ if match(system('grep --version'), 'GNU.*2\.10') >= 0
     echo 'GNU grep 2.10 is buggy, vim-easygrep will not work properly'
 endif
 let g:EasyGrepCommand = 1
-let g:EasyGrepMode = 2
+let g:EasyGrepMode = 0
 if s:use_loclist
     let g:EasyGrepWindow = 1
 endif
