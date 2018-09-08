@@ -185,6 +185,7 @@ let g:bookmark_no_default_key_mappings = 1
 nmap <silent> <leader>mm :BookmarkToggle<CR>
 nmap <silent> <leader>mi :BookmarkAnnotate<CR>
 nmap <silent> <leader>ma :BookmarkShowAll<CR>
+nmap <silent> <leader>mf :BookmarkShow<CR>
 nmap <silent> <leader>mn :BookmarkNext<CR>
 nmap <silent> <leader>mp :BookmarkPrev<CR>
 nmap <silent> <leader>mc :BookmarkClear<CR>
