@@ -161,7 +161,7 @@ let g:ConqueTerm_CloseOnEnd = 1
 let g:ConqueTerm_ExecFileKey = '<leader>ex'
 
 " Configure vim-easygrep
-if match(system('grep --version'), 'GNU.*2\.10') >= 0
+if executable('grep') && match(system('grep --version'), 'GNU.*2\.10') >= 0
     echo 'GNU grep 2.10 is buggy, vim-easygrep will not work properly'
 endif
 let g:EasyGrepCommand = 1
