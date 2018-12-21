@@ -186,10 +186,12 @@ nmap <silent> <leader>mm :BookmarkToggle<CR>
 nmap <silent> <leader>mi :BookmarkAnnotate<CR>
 nmap <silent> <leader>ma :BookmarkShowAll<CR>
 nmap <silent> <leader>mf :BookmarkShow<CR>
+nmap <silent> <leader>md :BookmarkShowCwd<CR>
 nmap <silent> <leader>mn :BookmarkNext<CR>
 nmap <silent> <leader>mp :BookmarkPrev<CR>
-nmap <silent> <leader>mc :BookmarkClear<CR>
-nmap <silent> <leader>mx :BookmarkClearAll<CR>
+nmap <silent> <leader>mxf :BookmarkClear<CR>
+nmap <silent> <leader>mxa :BookmarkClearAll<CR>
+nmap <silent> <leader>mxd :BookmarkClearCwd<CR>
 
 " Configure vim-template
 let g:templates_no_autocmd = 1
