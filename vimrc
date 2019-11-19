@@ -71,6 +71,7 @@ set wildmode=longest,list:longest
 set mouse=a
 set diffopt+=vertical
 set makeprg=build_me
+set belloff=all
 if has('unnamedplus')
     set clipboard=unnamedplus,autoselect,exclude:cons\|linux
 elseif has('clipboard')
