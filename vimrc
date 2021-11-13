@@ -68,7 +68,9 @@ set tags=
 set showmatch
 set backspace=indent,eol,start
 set wildmode=longest,list:longest
-set mouse=a
+if has('mouse')
+    set mouse=a
+endif
 set diffopt+=vertical
 set makeprg=build_me
 set belloff=all
