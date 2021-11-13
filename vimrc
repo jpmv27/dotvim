@@ -73,7 +73,9 @@ if has('mouse')
 endif
 set diffopt+=vertical
 set makeprg=build_me
-set belloff=all
+if has('belloff')
+    set belloff=all
+endif
 if has('unnamedplus')
     set clipboard=unnamedplus,autoselect,exclude:cons\|linux
 elseif has('clipboard')
