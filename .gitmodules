@@ -94,3 +94,6 @@
 [submodule "bundle/vim-plugin-AnsiEsc"]
 	path = bundle/vim-plugin-AnsiEsc
 	url = git@github.com:jpmv27/vim-plugin-AnsiEsc.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/jpmv27/vim-unimpaired.git
