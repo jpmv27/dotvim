@@ -1,0 +1,32 @@
+*my-plugins*
+
+Conque-Shell .................... |ConqueTerm|
+DirDiff.vim ..................... |DirDiff.vim|
+ReplaceWithRegister ............. |ReplaceWithRegister.vim|
+ReplaceWithSameIndentRegister ... |ReplaceWithSameIndentRegister.vim|
+a.vim ........................... |alternate|
+bufexplorer ..................... |bufexplorer|
+ctrlp.vim ....................... |CtrlP|
+quilt ........................... |quilt.txt|
+syntastic ....................... |syntastic|
+tagbar .......................... |tagbar|
+vim-autoformat .................. ~/.vim/bundle/vim-autoformat/README.md
+vim-better-whitespace ........... |better-whitespace|
+vim-bitbake
+vim-bookmarks ................... |bookmarks.txt|
+vim-clean-mode .................. ~/.vim/bundle/vim-clean-mode/README
+vim-cpp-enhanced-highlight ...... ~/.vim/bundle/vim-cpp-enhanced-highlight/README.md
+vim-easygrep .................... |EasyGrep|
+vim-fugitive .................... |fugitive|
+vim-lawrencium .................. |lawrencium|
+vim-man ......................... |man|
+vim-pathogen .................... https://github.com/tpope/vim-pathogen/blob/master/README.markdown
+vim-per-project-settings ........ ~/.vim/bundle/vim-per-project-settings/README.md
+vim-plugin-AnsiEsc .............. |AnsiEsc|
+vim-project ..................... ~/.vim/bundle/vim-project/README.md
+vim-side-by-side-diff ........... ~/.vim/bundle/vim-side-by-side-diff/README.md
+vim-tag-manager ................. ~/.vim/bundle/vim-tag-manager/README.md
+vim-tags2spell .................. ~/.vim/bundle/vim-tags2spell/README.md
+vim-template .................... |template.txt|
+vim-unimpaired .................. |unimpaired|
+
