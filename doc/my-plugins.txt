@@ -20,7 +20,7 @@ vim-easygrep .................... |EasyGrep|
 vim-fugitive .................... |fugitive|
 vim-lawrencium .................. |lawrencium|
 vim-man ......................... |man|
-vim-pathogen .................... https://github.com/tpope/vim-pathogen/blob/master/README.markdown
+vim-pathogen .................... https://raw.githubusercontent.com/tpope/vim-pathogen/refs/heads/master/README.markdown
 vim-per-project-settings ........ ~/.vim/bundle/vim-per-project-settings/README.md
 vim-plugin-AnsiEsc .............. |AnsiEsc|
 vim-project ..................... ~/.vim/bundle/vim-project/README.md
@@ -30,3 +30,9 @@ vim-tags2spell .................. ~/.vim/bundle/vim-tags2spell/README.md
 vim-template .................... |template.txt|
 vim-unimpaired .................. |unimpaired|
 
+To see key bindings:
+
+:map ............................ |:map|
+:nmap ........................... |:nmap|
+:vmap ........................... |:vmap|
+:imap ........................... |:imap|
